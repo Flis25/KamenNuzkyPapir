@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# IDE0058: Hodnota výrazu se nikdy nepoužívá.
+dotnet_diagnostic.IDE0058.severity = none
