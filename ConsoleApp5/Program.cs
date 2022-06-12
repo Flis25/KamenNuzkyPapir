@@ -11,18 +11,12 @@ Console.Clear();
 Console.WriteLine("Hráč 1 [READY]");
 Console.ForegroundColor = ConsoleColor.Green;
 Console.WriteLine("Čekejte prosím");
-await AnsiConsole.Progress()
-    .StartAsync(async ctx =>
-    {
-        // Define tasks
-        var task1 = ctx.AddTask("[green]LOADING[/]");
-
-        while (!ctx.IsFinished)
-        {
-            await Task.Delay(111);
-            task1.Increment(1);
-        }
-    });
+Console.Clear();
+Console.WriteLine(2);
+Thread.Sleep(1500);
+Console.Clear();
+Console.WriteLine(1);
+Thread.Sleep(1500);
 Console.Clear();
 
 int hrac1 = 0;
@@ -82,7 +76,7 @@ while (ne == true)
                 hrac1 = 0;
                 hrac2 = 0;
                 Console.Clear();
-            }
+        }
             else
             {
                 ne = false;
@@ -110,8 +104,8 @@ while (ne == true)
             {
                 ne = false;
                 Console.Clear();
-            }
         }
+    }
     }
     else if (slovo == "3")
     {
